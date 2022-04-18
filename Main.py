@@ -4,14 +4,14 @@
 import os
 import sys
 
-# Step 1: Obtaining plaintext
-file = open(os.path.join(sys.path[0], "plaintext.txt"), "r")
+# Step 1: Obtaining 128 bit hex plaintext
+
+file = open(os.path.join(sys.path[0], "128BitHexCode.txt"), "r")
 plaintext = file.read()
+file.close()
 
 # Step 2: Convert plaintext to decimal
-# plaintext_decimal = float(plaintext.txt)
+i = int(plaintext, 16)
+plaintext_decimal = str(i)
 
-# print(plaintext_decimal)
-print(plaintext)
-
-file.close()
+print(plaintext_decimal)
