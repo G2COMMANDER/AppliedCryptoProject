@@ -31,9 +31,15 @@ def xor_strings(s, t) -> bytes:
 
 
 key_16 = urandom(16)
-print('Key:', key_16)
+print("16 Bit Key:", key_16)
 
-CipherText = xor_strings(plaintext_decimal.encode('utf8'), key_16)
-print("CipherText:", CipherText)
+CipherText_16 = xor_strings(plaintext_decimal.encode('utf8'), key_16)
+print("16 Bit encrypted CipherText:", CipherText_16,)
 
 # Step 4: Generate 128 bit key (one time pad) and bitwise XOR encode
+
+key_128 = urandom(128)  # Change this later to accomodate plaintext length
+print("128 Bit Key:", key_128)
+
+CipherText_128 = xor_strings(plaintext_decimal.encode('utf8'), key_128)
+print("16 Bit encrypted CipherText:", CipherText_128,)
