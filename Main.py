@@ -58,5 +58,3 @@ print("16 Bit encrypt to binary:", arrayToString(CipherBin_16))
 
 CipherBin_128 = [bin(byte) for byte in bytes(CipherText_128)]
 print("128 Bit encrypt to binary:", arrayToString(CipherBin_128))
-# print("16 Bit encode to Binary", decimalToBinary(decimalToBinary))
-# print("128 Bit encode to Binary", decimalToBinary(CipherText_128))
