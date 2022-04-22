@@ -43,3 +43,24 @@ print("128 Bit Key:", key_128)
 
 CipherText_128 = xor_strings(plaintext_decimal.encode('utf8'), key_128)
 print("16 Bit encrypted CipherText:", CipherText_128,)
+
+# Step 5: Convert Deciaml to binary
+
+
+def decimalToBinary(n):
+    return bin(n).replace("0b", "")
+
+
+def arrayToString(n):
+    str = ''
+    str = str.join(n)
+    return str
+
+
+CipherBin_16 = [bin(byte) for byte in bytes(CipherText_16)]
+print("16 Bit encrypt to binary:", arrayToString(CipherBin_16))
+
+CipherBin_128 = [bin(byte) for byte in bytes(CipherText_128)]
+print("128 Bit encrypt to binary:", arrayToString(CipherBin_128))
+# print("16 Bit encode to Binary", decimalToBinary(decimalToBinary))
+# print("128 Bit encode to Binary", decimalToBinary(CipherText_128))
