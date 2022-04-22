@@ -47,14 +47,10 @@ print("16 Bit encrypted CipherText:", CipherText_128,)
 # Step 5: Convert Deciaml to binary
 
 
-def decimalToBinary(n):
-    return bin(n).replace("0b", "")
-
-
 def arrayToString(n):
     str = ''
     str = str.join(n)
-    return str
+    return str.replace("0b", "")
 
 
 CipherBin_16 = [bin(byte) for byte in bytes(CipherText_16)]
